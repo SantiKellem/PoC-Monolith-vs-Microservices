@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/api/transfer', async (req: Request, res: Response) => TransferController.handleRequest(req, res));
+app.post('/api/transfer', TransferController.handleRequest);
 
 app.use((req: Request, res: Response) => {
     res.status(404).json({ error: 'Endpoint not found' });

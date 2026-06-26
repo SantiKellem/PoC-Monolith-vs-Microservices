@@ -12,11 +12,11 @@ model Account {
   owner      String
   balance    Float           @default(0)
   
-  sends      Transfer[] @relation("AccountOrigin")
-  receipts   Transfer[] @relation("AccountDestination")
+  sends      Transaction[] @relation("AccountOrigin")
+  receipts   Transaction[] @relation("AccountDestination")
 }
 
-model Transfer {
+model Transaction {
   id                   Int      @id @default(autoincrement())
   amount               Float
   date                 DateTime @default(now())

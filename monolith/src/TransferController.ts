@@ -15,9 +15,9 @@ export class TransferController {
             if (!originId || !destinationId || amount <= 0) 
                 return res.status(400).json({ error: 'Invalid transfer data' });
 
-            const result = await TransferModel.processTransfer(originId, destinationId, amount);
+            const transaction = await TransferModel.processTransfer(originId, destinationId, amount);
 
-            return res.status(201).json(result);
+            return res.status(201).json(transaction);
         } 
         catch (error: any) {
             return res.status(400).json({ error: error.message || 'An error occurred during the transfer' });

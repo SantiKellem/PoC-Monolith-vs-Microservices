@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export class TransferModel {
     static async processTransfer(originId: number, destinationId: number, amount: number) {
-        const result = await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
+        return await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
             const originAccount = await tx.account.findUnique({
                 where: { id: originId },
             });
@@ -29,7 +29,7 @@ export class TransferModel {
                 data: { balance: { increment: amount } },
             });
 
-            const transfer = await tx.transfer.create({
+            const transfer = await tx.transaction.create({
                 data: {
                     amount,
                     originId,

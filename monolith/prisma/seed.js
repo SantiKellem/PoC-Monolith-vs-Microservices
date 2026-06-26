@@ -5,11 +5,12 @@ const prisma = new PrismaClient();
 async function main() {
 	console.log('Populating database with test data');
 
-	await prisma.transfer.deleteMany();
+	await prisma.transaction.deleteMany();
 	await prisma.account.deleteMany();
 	console.log('DB cleaned');
 
 	const accountsData = Array.from({ length: 10 }).map((_, index) => ({
+		id: index + 1,
 		owner: `Client ${index + 1}`,
 		balance: 10000000.00,
 	}));
