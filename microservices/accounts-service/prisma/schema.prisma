@@ -9,5 +9,5 @@ datasource db {
 model Account {
   id        Int      @id @default(autoincrement())
   owner     String
-  balance     Float    @default(0)
+  balance   Float    @default(0)
 }

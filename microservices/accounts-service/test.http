@@ -1,0 +1,17 @@
+###
+POST http://localhost:3001/api/accounts/debit
+Content-Type: application/json
+
+{
+    "accountId": 1,
+    "amount": 100
+}
+
+###
+POST http://localhost:3001/api/accounts/credit
+Content-Type: application/json
+
+{
+    "accountId": 2,
+    "amount": 100
+}

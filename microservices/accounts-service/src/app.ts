@@ -7,10 +7,10 @@ const app = express();
 app.use(express.json());
 
 // Expose endpoint for debit operation
-app.post('/api/accounts/debit', async (req: Request, res: Response) => AccountController.handleDebit(req, res));
+app.post('/api/accounts/debit', AccountController.handleDebit);
 
 // Expose endpoint for credit operation
-app.post('/api/accounts/credit', async (req: Request, res: Response) => AccountController.handleCredit(req, res));
+app.post('/api/accounts/credit', AccountController.handleCredit);
 
 const PORT = process.env.PORT || 3001;
 
