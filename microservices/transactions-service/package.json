@@ -1,35 +1,28 @@
 {
-  "name": "monolith",
-  "version": "1.0.0",
-  "main": "App.js",
+  "name": "transactions-service",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node dist/App.js",
+    "start": "node dist/app.js",
     "seed": "node prisma/seed.js",
-    "dev": "tsx watch src/App.ts"
+    "dev": "tsx watch src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@types/cors": "^2.8.19",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "@prisma/client": "6.19.3",
+    "@prisma/client": "^6.19.3",
     "@types/express": "^5.0.6",
     "@types/node": "^26.0.1",
-    "prisma": "6.19.3",
+    "prisma": "^6.19.3",
     "ts-node-dev": "^2.0.0",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
-  },
-  "prisma": {
-    "seed": "node prisma/seed.js"
   }
 }
