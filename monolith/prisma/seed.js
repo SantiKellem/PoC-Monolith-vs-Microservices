@@ -9,7 +9,7 @@ async function main() {
 	await prisma.account.deleteMany();
 	console.log('DB cleaned');
 
-	const accountsData = Array.from({ length: 10 }).map((_, index) => ({
+	const accountsData = Array.from({ length: 10000 }).map((_, index) => ({
 		id: index + 1,
 		owner: `Client ${index + 1}`,
 		balance: 10000000.00,
