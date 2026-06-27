@@ -1,5 +1,5 @@
 ###
-POST http://localhost:3002/api/transfer
+POST https://powerful-nourishment-production-73b2.up.railway.app/api/transfer
 Content-Type: application/json
 
 {

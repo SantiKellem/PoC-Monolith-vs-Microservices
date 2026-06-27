@@ -51,7 +51,12 @@ export class TransactionController {
             return res.status(201).json(transaction);
 
         } catch (error: any) {
-            return res.status(400).json({ error: error.message || 'An error occurred during the transfer' });
+            console.dir(error, { depth: null });
+
+            return res.status(400).json({
+                error: error.message,
+                cause: error.cause
+            });
         }
     }
 }
