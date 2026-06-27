@@ -18,6 +18,6 @@ app.use((req: Request, res: Response) => {
     res.status(404).json({ error: 'Endpoint not found' });
 });
 
-app.listen(PORT, () => {
+app.listen(Number(PORT), '::', () => {
     console.log(`Accounts Service running on port ${PORT}`);
 });
