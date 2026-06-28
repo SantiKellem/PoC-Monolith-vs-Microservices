@@ -195,6 +195,12 @@ The repository also includes CSV exports of the test results:
 - k6-scripts/results_monolith.csv
 - k6-scripts/results_microservices.csv
 
+If you want to generate your own results, add the flag `--out` and execute:
+
+```bash
+k6 run -e TARGET_URL=http://localhost:3000/api/transfer --out csv=your_csv_name.csv k6-scripts/stress-test.js
+```
+
 ## Observed results
 
 Based on the stress-test data collected from the deployed environments, the results were the following:
