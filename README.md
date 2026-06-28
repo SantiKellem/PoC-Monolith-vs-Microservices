@@ -205,17 +205,19 @@ k6 run -e TARGET_URL=http://localhost:3000/api/transfer --out csv=your_csv_name.
 
 Based on the stress-test data collected from the deployed environments, the results were the following:
 
-| Metric | Monolith | Microservices |
-| --- | ---: | ---: |
-| Total request number | 7.030 | 6.622 |
-| Average request duration | 226.87 ms | 243.77 ms |
-| Maximum request duration | 1196.03 ms | 1201.89 ms |
-| Average waiting time | 226.81 ms | 243.53 ms |
-| Average blocked time | 1.94 ms | 2.06 ms |
-| Standard deviation | 31,77 ms | 28,30 ms |
-| Percentile 95 | 238,21 ms | 263,48 ms |
-| Percentile 99 | 306,46 ms | 337,13 ms |
-| Failed requests | 0.00% | 0.00% |
+| Metric | Monolith | Microservices | Difference |
+| --- | ---: | ---: | ---: |
+| Total request number | 7.030 | 6.622 | -5.8% |
+| Throughput (avg) | 100.34 req/s | 94.27 req/s | -6.0% |
+| Average request duration | 226.87 ms | 243.77 ms | +16.90 ms |
+| Median request duration | 222.68 ms | 239.22 ms | +16.54 ms |
+| Average waiting time | 226.81 ms | 243.53 ms | +16.54 ms |
+| Standard deviation | 31,77 ms | 28,30 ms | -3.47 ms ms |
+| Maximum request duration | 1196.03 ms | 1201.89 ms | +5.86 ms |
+| Average blocked time | 1.94 ms | 2.06 ms | +0.12 ms |
+| Percentile 95 | 238,21 ms | 263,48 ms | +24.27 ms |
+| Percentile 99 | 306,46 ms | 337,13 ms | +30.67 ms |
+| Failed requests | 0.00% | 0.00% | - |
 
 ## Conclusions
 
