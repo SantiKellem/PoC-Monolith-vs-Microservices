@@ -212,7 +212,7 @@ Based on the stress-test data collected from the deployed environments, the resu
 | Average request duration | 226.87 ms | 243.77 ms | +16.90 ms |
 | Median request duration | 222.68 ms | 239.22 ms | +16.54 ms |
 | Average waiting time | 226.81 ms | 243.53 ms | +16.54 ms |
-| Standard deviation | 31,77 ms | 28,30 ms | -3.47 ms ms |
+| Standard deviation | 31,77 ms | 28,30 ms | -3.47 ms |
 | Maximum request duration | 1196.03 ms | 1201.89 ms | +5.86 ms |
 | Average blocked time | 1.94 ms | 2.06 ms | +0.12 ms |
 | Percentile 95 | 238,21 ms | 263,48 ms | +24.27 ms |
